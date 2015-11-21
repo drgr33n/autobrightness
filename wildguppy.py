@@ -31,7 +31,7 @@ def brightness(im_file):
     return stat.rms[0]
 
 def takeSample(tmpimg):
-    os.system("fswebcam -r 356x292 -d /dev/video0 %s" %tmpimg)
+    os.system("fswebcam -S 5 -r 356x292 -d /dev/video0 %s" %tmpimg)
 
 def takeScreeenSample(tmpimg):
     os.system("scrot %s" %tmpimg)
